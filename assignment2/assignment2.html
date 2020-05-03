@@ -4,58 +4,72 @@
     <title>Xena Events</title>
     <style>
         body {
-            background-color: lavenderblush;
-			margin: 1cm;
-			border: 2px Solid Blue;
-			padding: 1cm;
-			border-radius: 20px;
-			text-align: center;
-        }
-		form {
-			width: 300px;
-			margin: 1px auto;
-		}
-        table {
-            width: 60%;
-        }
+          body {
+					background-color: lavenderblush;
+					margin: 1cm;
+					border: 2px Solid Blue;
+					padding: 1cm;
+					border-radius: 20px;
+					text-align: center;
+					}
+					form {
+					width: 300px;
+					margin: 1px auto;
+					}
+					table {
+					width: 60%;
+					}
+					#details{
+					padding:10px;
+					color:black;
+					}
+					#submit:hover{
+					background-color:skyblue;
+					color:black;
+					}
     </style>
 </head>
 <body>
-<div <h5><font style="font-size: 50px" face="Times New Roman" color="#FF5733" >XENA EVENT</font></h5></div>
+<div 
+    <h5><font style="font-size: 50px" face="Times New Roman" color="#FF5733" >XENA EVENT</font></h5></div>
  <img src="hot air baloon.jpg" alt="Hot air baloon" width="500" height="300"><br/><br/>
-    <div>
-        <form name="register">
-            <table>
-                <tr>
-                    <td>Name:</td>
-                    <td><input type="text" name="name" pattern="[A-Za-z]{1,}" style="text-transform:uppercase" title="Enter only alphabets" required></td>
-                </tr>
-                <tr>
-                    <td>Age:</td>
-                    <td><input type="number" name="age" min="18" pattern="[0-9]" required ></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter correct mail id" required></td>
-                </tr>
-                <tr>
-                    <td>City:</td>
-                    <td>
-                        <input list="venue" id="venue id" name="venue name" required/>
-                        <datalist id="venue">
-                            <option value="Bangalore">
-                            <option value="Rajkot">
-                            <option value="Vijag">
-                        </datalist>
-                    </td>
-                </tr>
-                <tr style="height: 12pt;"></tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Submit"></td>
-                </tr>
-            </table>
-        </form>
+<div>
+<form action="" method="POST" name="register" >
+   <table style="border:1px solid blue; padding:20px; border-radius:10px">
+     <tr>
+	     <td id="details">Name:</td>
+		 <td>
+		    <input type="text" name="name" pattern="[A-Za-z]{1,}" style="text-transform:uppercase" title="Enter only alphabets" placeholder="Enter your Name" required></td>
+	</tr>
+	<tr>
+		 <td id="details">Age:</td>
+		 <td> 
+             <input type="number" name="age" min="18" pattern="[0-9]" title="Age should be above 18" placeholder="Enter your Age" required ></td>
+	</tr>
+	<tr>
+	     <td id="details">Email:</td>
+		 <td>
+		     <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your Email ID" title="Enter correct mail id" required></td>
+	</tr>
+	<tr>
+		 <td id="details">City:</td>
+		 <td>
+		     <input list="city" id="city id" name="city name" placeholder="Enter your City" title="Select your city" required/>
+		 <datalist id="city">
+				<option value="Bangalore">
+				<option value="Rajkot">
+				<option value="Vijag">
+		 </datalist>
+	     </td>
+	</tr>
+	<tr style="height: 12pt;"/>
+	<tr>
+		<td/>
+		<td>
+			<input id="submit" type="submit" name="submit" value="Submit"></td>
+	</tr>
+       </table>
+     </form>
     </div>
-</body>
+  </body>
 </html>
